@@ -1,4 +1,4 @@
-package com.gmail.apigeoneer.shoeshop
+package com.gmail.apigeoneer.shoeshop.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import com.gmail.apigeoneer.shoeshop.R
 import com.gmail.apigeoneer.shoeshop.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {

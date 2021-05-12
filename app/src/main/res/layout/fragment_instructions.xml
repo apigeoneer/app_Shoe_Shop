@@ -7,16 +7,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.WelcomeFragment">
+        tools:context=".ui.InstructionsFragment">
 
         <TextView
-            android:id="@+id/welcome_tv"
+            android:id="@+id/instructions_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
             android:layout_marginEnd="120dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Choose from our latest collection of footwear that are sure to make you stand out"
+            android:text="Here go the instructions."
             android:textSize="28sp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
@@ -29,11 +29,11 @@
             android:id="@+id/logo_iv"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:src="@drawable/logo"
             android:layout_marginStart="48dp"
             android:layout_marginTop="40dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <Button
             android:id="@+id/continue_btn"

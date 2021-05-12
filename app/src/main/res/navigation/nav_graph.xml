@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.gmail.apigeoneer.shoeshop.LoginFragment"
+        android:name="com.gmail.apigeoneer.shoeshop.ui.LoginFragment"
         android:label="LoginFragment" >
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
@@ -13,7 +13,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.gmail.apigeoneer.shoeshop.WelcomeFragment"
+        android:name="com.gmail.apigeoneer.shoeshop.ui.WelcomeFragment"
         android:label="WelcomeFragment" >
         <action
             android:id="@+id/action_welcomeFragment_to_shoeListFragment"
@@ -21,6 +21,6 @@
     </fragment>
     <fragment
         android:id="@+id/shoeListFragment"
-        android:name="com.gmail.apigeoneer.shoeshop.ShoeListFragment"
+        android:name="com.gmail.apigeoneer.shoeshop.ui.ShoeListFragment"
         android:label="ShoeListFragment" />
 </navigation>

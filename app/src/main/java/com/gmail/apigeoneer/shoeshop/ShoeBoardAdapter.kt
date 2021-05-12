@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.gmail.apigeoneer.shoeshop.ui.ShoeListFragment
 
 class ShoeBoardAdapter(
     private val context: ShoeListFragment,

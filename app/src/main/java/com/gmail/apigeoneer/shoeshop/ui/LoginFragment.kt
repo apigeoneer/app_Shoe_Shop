@@ -1,4 +1,4 @@
-package com.gmail.apigeoneer.shoeshop
+package com.gmail.apigeoneer.shoeshop.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import com.gmail.apigeoneer.shoeshop.R
 import com.gmail.apigeoneer.shoeshop.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment() {
@@ -19,7 +20,8 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
+        binding = DataBindingUtil.inflate(inflater,
+            R.layout.fragment_login, container, false)
 
         binding.loginBtn.setOnClickListener {
             Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment)
