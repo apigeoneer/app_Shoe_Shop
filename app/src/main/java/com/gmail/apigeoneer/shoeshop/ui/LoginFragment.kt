@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.gmail.apigeoneer.shoeshop.R
 import com.gmail.apigeoneer.shoeshop.databinding.FragmentLoginBinding
 
@@ -24,7 +25,11 @@ class LoginFragment : Fragment() {
             R.layout.fragment_login, container, false)
 
         binding.loginBtn.setOnClickListener {
-            Navigation.createNavigateOnClickListener(R.id.action_loginFragment_to_welcomeFragment)
+            it.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+        }
+
+        binding.registerBtn.setOnClickListener {
+            it.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
         }
 
         return binding.root
