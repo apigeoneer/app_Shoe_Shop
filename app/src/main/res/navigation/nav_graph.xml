@@ -38,5 +38,9 @@
     <fragment
         android:id="@+id/detailFragment"
         android:name="com.gmail.apigeoneer.shoeshop.ui.DetailFragment"
-        android:label="DetailFragment" />
+        android:label="DetailFragment" >
+        <action
+            android:id="@+id/action_detailFragment_to_shoeListFragment"
+            app:destination="@id/shoeListFragment" />
+    </fragment>
 </navigation>
