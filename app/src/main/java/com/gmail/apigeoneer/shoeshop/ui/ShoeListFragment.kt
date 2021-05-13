@@ -16,8 +16,6 @@ class ShoeListFragment : Fragment() {
     // data binding
     private lateinit var binding: FragmentShoeListBinding
 
-    private var shoe: Shoe? = null
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,11 +27,6 @@ class ShoeListFragment : Fragment() {
         binding.fab.setOnClickListener {
             it.findNavController().navigate(R.id.action_shoeListFragment_to_detailFragment)
         }
-
-        binding.shoe = shoe
-        binding.handler = this
-
-        binding.emptyListItemTv.text = shoe?.name.toString()
 
         return binding.root
     }
