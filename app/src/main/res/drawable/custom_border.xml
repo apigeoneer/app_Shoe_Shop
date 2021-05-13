@@ -6,5 +6,6 @@
         android:right="0.5dp"
         android:bottom="0.5dp"
         android:left="0.5dp" />
+    <solid android:color="@color/white"/>
     <stroke android:width="0.53dp" android:color="@color/border" />
 </shape>
