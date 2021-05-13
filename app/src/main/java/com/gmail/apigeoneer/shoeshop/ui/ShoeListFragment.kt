@@ -7,14 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import com.gmail.apigeoneer.shoeshop.R
 import com.gmail.apigeoneer.shoeshop.databinding.FragmentShoeListBinding
+import com.gmail.apigeoneer.shoeshop.models.Shoe
 
 class ShoeListFragment : Fragment() {
 
     // data binding
     private lateinit var binding: FragmentShoeListBinding
+
+    private var shoe: Shoe? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +29,11 @@ class ShoeListFragment : Fragment() {
         binding.fab.setOnClickListener {
             it.findNavController().navigate(R.id.action_shoeListFragment_to_detailFragment)
         }
+
+        binding.shoe = shoe
+        binding.handler = this
+
+        binding.emptyListItemTv.text = shoe?.name.toString()
 
         return binding.root
     }
