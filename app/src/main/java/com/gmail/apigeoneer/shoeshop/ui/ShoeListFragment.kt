@@ -6,15 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.gmail.apigeoneer.shoeshop.R
 import com.gmail.apigeoneer.shoeshop.databinding.FragmentShoeListBinding
 import com.gmail.apigeoneer.shoeshop.models.Shoe
+import com.gmail.apigeoneer.shoeshop.viewmodels.ShoeListViewModel
 
 class ShoeListFragment : Fragment() {
 
     // data binding
     private lateinit var binding: FragmentShoeListBinding
+
+    private lateinit var shoeListViewModel: ShoeListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +31,8 @@ class ShoeListFragment : Fragment() {
         binding.fab.setOnClickListener {
             it.findNavController().navigate(R.id.action_shoeListFragment_to_detailFragment)
         }
+
+        shoeListViewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
 
         return binding.root
     }
