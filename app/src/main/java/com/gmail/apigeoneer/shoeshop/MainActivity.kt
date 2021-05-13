@@ -18,5 +18,9 @@ class MainActivity : AppCompatActivity() {
         clAllShoes = findViewById(R.id.all_shoes_constraint_layout)
         rvBoard = findViewById(R.id.board_recycler_view)
 
+        // params: context & #columns
+        rvBoard.adapter = ShoeBoardAdapter(this, 2)
+        rvBoard.setHasFixedSize(true)
+        rvBoard.layoutManager = GridLayoutManager(this, 2)
     }
 }
