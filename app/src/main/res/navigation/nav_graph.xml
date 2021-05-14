@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/shoeListFragment"
-        android:name="com.gmail.apigeoneer.shoeshop.ui.ShoeListFragment"
+        android:name="com.gmail.apigeoneer.shoeshop.ui.overview.ShoeListFragment"
         android:label="ShoeListFragment" >
         <action
             android:id="@+id/action_shoeListFragment_to_detailFragment"
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.gmail.apigeoneer.shoeshop.ui.DetailFragment"
+        android:name="com.gmail.apigeoneer.shoeshop.ui.detail.DetailFragment"
         android:label="DetailFragment" >
         <action
             android:id="@+id/action_detailFragment_to_shoeListFragment"

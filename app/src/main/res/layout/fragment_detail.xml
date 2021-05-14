@@ -8,12 +8,16 @@
         <variable
             name="shoe"
             type="com.gmail.apigeoneer.shoeshop.models.Shoe" />
+
+        <variable
+            name="shoeListViewModel"
+            type="com.gmail.apigeoneer.shoeshop.viewmodels.ShoeListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.DetailFragment">
+        tools:context=".ui.detail.DetailFragment">
 
         <TextView
             android:id="@+id/shoe_name_tv"
@@ -164,6 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:onClick="@{() -> shoeListViewModel.addShoe()}"
                 android:text="save" />
 
             <Button
@@ -172,6 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
+                android:onClick="@{() -> shoeListViewModel.cancelAddingShoe()}"
                 android:text="cancel" />
         </LinearLayout>
 

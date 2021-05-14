@@ -11,7 +11,7 @@ class ShoeListViewModel: ViewModel() {
      * from data class Shoe
      */
     private var shoe: Shoe? = Shoe("", 0.0, "", "")
-    private val shoes = mutableListOf<Shoe>()
+    private val shoes = mutableListOf<Shoe>()      // to be shared between fragments
 
     /**
      * from ShoeListFragment
@@ -31,6 +31,10 @@ class ShoeListViewModel: ViewModel() {
         shoes.add(newShoe)
         _isShoeAdded.value = true
         _shoeList.value = shoes
+    }
+
+    fun cancelAddingShoe() {
+        shoes.clear()
     }
 
     // Factory not needed since our ViewModel has no constructor args

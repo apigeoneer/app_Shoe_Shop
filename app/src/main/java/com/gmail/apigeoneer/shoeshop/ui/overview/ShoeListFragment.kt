@@ -1,4 +1,4 @@
-package com.gmail.apigeoneer.shoeshop.ui
+package com.gmail.apigeoneer.shoeshop.ui.overview
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.gmail.apigeoneer.shoeshop.R
@@ -18,6 +19,10 @@ class ShoeListFragment : Fragment() {
 
     // data binding
     private lateinit var binding: FragmentShoeListBinding
+
+    // Use the 'by activityViewModels()' Kotlin property delegate
+    // from the fragment-ktx artifact
+    private val shoeListViewModel: ShoeListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
