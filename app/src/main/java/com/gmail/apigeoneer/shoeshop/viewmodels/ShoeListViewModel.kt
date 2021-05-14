@@ -32,4 +32,6 @@ class ShoeListViewModel: ViewModel() {
         _isShoeAdded.value = true
         _shoeList.value = shoes
     }
+
+    // Factory not needed since our ViewModel has no constructor args
 }

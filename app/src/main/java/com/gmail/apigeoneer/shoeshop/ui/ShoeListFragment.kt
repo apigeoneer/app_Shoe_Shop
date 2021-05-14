@@ -19,8 +19,6 @@ class ShoeListFragment : Fragment() {
     // data binding
     private lateinit var binding: FragmentShoeListBinding
 
-    private lateinit var shoeListViewModel: ShoeListViewModel
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,11 +27,8 @@ class ShoeListFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_shoe_list, container, false)
 
-        shoeListViewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
-
         // inflate the shoe list item
         val shoeListItem: ShoeItemBinding = DataBindingUtil.inflate(inflater, R.layout.shoe_item, container, false)
-       // shoeListItem.newShoeData = shoeListViewModel.shoeList[0]                 // not the right approach
 
         binding.fab.setOnClickListener {
             it.findNavController().navigate(R.id.action_shoeListFragment_to_detailFragment)
