@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.gmail.apigeoneer.shoeshop.R
@@ -32,8 +33,15 @@ class ShoeListFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_shoe_list, container, false)
 
-        // inflate the shoe list item
-        val shoeListItem: ShoeItemBinding = DataBindingUtil.inflate(inflater, R.layout.shoe_item, container, false)
+        shoeListViewModel.shoeList.observe(viewLifecycleOwner, Observer {
+
+            for (shoe in shoeListViewModel.shoeList.value!!) {
+                // inflate the shoe list item
+                val shoeListItem: ShoeItemBinding = DataBindingUtil.inflate(inflater, R.layout.shoe_item, container, false)
+                shoeListItem.newShoeData = shoe
+                binding.shoeListLl.addView(shoeListItem.root)
+            }
+        })
 
         binding.fab.setOnClickListener {
             it.findNavController().navigate(R.id.action_shoeListFragment_to_detailFragment)

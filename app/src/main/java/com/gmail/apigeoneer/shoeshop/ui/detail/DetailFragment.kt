@@ -18,7 +18,6 @@ import com.gmail.apigeoneer.shoeshop.viewmodels.ShoeListViewModel
 class DetailFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
-
     private val shoeListViewModel: ShoeListViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -31,23 +30,20 @@ class DetailFragment : Fragment() {
         // tell the fragment that data binding is being used
         binding.lifecycleOwner = this
 
-        binding.shoeListViewModel = shoeListViewModel
+        shoeListViewModel.shoeList.observe(viewLifecycleOwner, Observer {
+            // Update the UI
 
-//        observeData()
+        })
 
-        /**
-         * Remove the fragment as an intermediary b/w the UI & the ViewModel by removing the onClickListeners
-         * & calling the appropriate methods in the onClick attribute of the respective buttons
-         */
-//        binding.saveBtn.setOnClickListener {
-//            // Add the new shoe entry in the ViewModel
-//            shoeListViewModel.addShoe()
-//            it.findNavController().navigate(R.id.action_detailFragment_to_shoeListFragment)
-//        }
-//
-//        binding.cancelBtn.setOnClickListener {
-//            it.findNavController().navigate(R.id.action_detailFragment_to_shoeListFragment)
-//        }
+        binding.saveBtn.setOnClickListener {
+            // Add the new shoe entry in the ViewModel
+            shoeListViewModel.addShoe()
+            it.findNavController().navigate(R.id.action_detailFragment_to_shoeListFragment)
+        }
+
+        binding.cancelBtn.setOnClickListener {
+            it.findNavController().navigate(R.id.action_detailFragment_to_shoeListFragment)
+        }
 
         return binding.root
     }

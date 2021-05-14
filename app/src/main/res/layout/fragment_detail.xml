@@ -8,10 +8,6 @@
         <variable
             name="shoe"
             type="com.gmail.apigeoneer.shoeshop.models.Shoe" />
-
-        <variable
-            name="shoeListViewModel"
-            type="com.gmail.apigeoneer.shoeshop.viewmodels.ShoeListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -168,7 +164,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:onClick="@{() -> shoeListViewModel.addShoe()}"
                 android:text="save" />
 
             <Button
@@ -177,7 +172,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:onClick="@{() -> shoeListViewModel.cancelAddingShoe()}"
                 android:text="cancel" />
         </LinearLayout>
 
