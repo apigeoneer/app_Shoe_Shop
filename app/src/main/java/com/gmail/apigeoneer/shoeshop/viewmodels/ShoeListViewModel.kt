@@ -27,8 +27,8 @@ class ShoeListViewModel: ViewModel() {
         get() = _isShoeAdded
 
     fun addShoe() {
-        val newShoe = Shoe("", 0.0, "", "")
-        shoes.add(newShoe)
+       // val newShoe = Shoe("", 0.0, "", "")
+        shoes.add(shoe!!)
         _isShoeAdded.value = true
         _shoeList.value = shoes
     }

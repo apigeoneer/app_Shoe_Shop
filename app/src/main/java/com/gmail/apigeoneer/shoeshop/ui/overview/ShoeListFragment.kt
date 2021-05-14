@@ -33,11 +33,16 @@ class ShoeListFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_shoe_list, container, false)
 
+        /**
+         * The ShoeListFragment needs to observe the shoeList LiveData,
+         * in order to update the UI accordingly
+         */
         shoeListViewModel.shoeList.observe(viewLifecycleOwner, Observer {
 
             for (shoe in shoeListViewModel.shoeList.value!!) {
                 // inflate the shoe list item
-                val shoeListItem: ShoeItemBinding = DataBindingUtil.inflate(inflater, R.layout.shoe_item, container, false)
+                val shoeListItem: ShoeItemBinding = DataBindingUtil.inflate(inflater,
+                        R.layout.shoe_item, container, false)
                 shoeListItem.newShoeData = shoe
                 binding.shoeListLl.addView(shoeListItem.root)
             }
