@@ -1,4 +1,4 @@
-package com.gmail.apigeoneer.shoeshop.ui
+package com.gmail.apigeoneer.shoeshop.ui.overview
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.gmail.apigeoneer.shoeshop.R
@@ -19,7 +21,9 @@ class ShoeListFragment : Fragment() {
     // data binding
     private lateinit var binding: FragmentShoeListBinding
 
-    private lateinit var shoeListViewModel: ShoeListViewModel
+    // Use the 'by activityViewModels()' Kotlin property delegate
+    // from the fragment-ktx artifact
+    private val shoeListViewModel: ShoeListViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,11 +33,20 @@ class ShoeListFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater,
             R.layout.fragment_shoe_list, container, false)
 
-        shoeListViewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
+        /**
+         * The ShoeListFragment needs to observe the shoeList LiveData,
+         * in order to update the UI accordingly
+         */
+        shoeListViewModel.shoeList.observe(viewLifecycleOwner, Observer {
 
-        // inflate the shoe list item
-        val shoeListItem: ShoeItemBinding = DataBindingUtil.inflate(inflater, R.layout.shoe_item, container, false)
-       // shoeListItem.newShoeData = shoeListViewModel.shoeList[0]                 // not the right approach
+            for (shoe in shoeListViewModel.shoeList.value!!) {
+                // inflate the shoe list item
+                val shoeListItem: ShoeItemBinding = DataBindingUtil.inflate(inflater,
+                        R.layout.shoe_item, container, false)
+                shoeListItem.newShoeData = shoe
+                binding.shoeListLl.addView(shoeListItem.root)
+            }
+        })
 
         binding.fab.setOnClickListener {
             it.findNavController().navigate(R.id.action_shoeListFragment_to_detailFragment)
