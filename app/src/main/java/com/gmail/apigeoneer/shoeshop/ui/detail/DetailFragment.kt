@@ -31,6 +31,8 @@ class DetailFragment : Fragment() {
         // tell the fragment that data binding is being used
         binding.lifecycleOwner = this
 
+        binding.shoeListViewModel = shoeListViewModel
+
 //        observeData()
 
         /**
