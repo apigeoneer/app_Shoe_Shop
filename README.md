@@ -1,4 +1,4 @@
 # Shoe Shop App
 
 ## Demonstration
-<img src="https://user-images.githubusercontent.com/43718257/121768436-cdda8c00-cb7b-11eb-89c8-d73c23cb149f.gif" width=240 height=460>
+<img src="https://user-images.githubusercontent.com/43718257/121768541-58bb8680-cb7c-11eb-88da-e6da385bc8ed.gif" width=240 height=460>
