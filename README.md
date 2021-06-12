@@ -20,5 +20,5 @@ This app implements Single Activity architecture. It has 2 screens, namely the m
   
 
 * [Jetpack components](https://developer.android.com/jetpack/getting-started)
-  - Uses compenents such as ViewModel and LiveData lifecycle classes
+  - The app uses Jetpack components such as ViewModel and LiveData lifecycle classes
   - Navigation : through a navigation file that takes a user from one page to the next in the app
