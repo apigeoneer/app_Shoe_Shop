@@ -5,7 +5,7 @@
 
 ## About
 
-This app implements Single Activity architecture. It has 2 scren, namely the mai screen & the detail screen.
+This app implements Single Activity architecture. It has 2 screens, namely the main screen & the detail screen.
 * Main screen
   - This is a list screen which uses ScrollView and LinearLayout for showing a list of items and one Floating Action button for going to the detail screen.
   - When there are no shoe items in the list , this screen prompts the user to add one, through a text in th eblank screen
