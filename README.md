@@ -16,7 +16,7 @@ This app implements Single Activity architecture. It has 2 screens, namely the m
   - When a user taps on the floating action button on the main screen, s(he) is taken to the detai screen in order to fill out the shoe details. This scren shows two columns of labels and edit views to enter in a new item.
  
  
-* Databinding has been applied in layouts to show the correct data to users in multiple layouts. It is also used for click listeners on a navigation screen in the app. The app makes use of the <data> and <variable> elements within the detail layout.
+* Databinding has been applied in layouts to show the correct data to users in multiple layouts. It is also used for click listeners on a navigation screen in the app. The app makes use of the < data > and < variable > elements within the detail layout.
   
 
 * [Jetpack components](https://developer.android.com/jetpack/getting-started)
