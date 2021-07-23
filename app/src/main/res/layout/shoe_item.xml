@@ -33,8 +33,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:text="@{newShoeData.name}"
+            android:textColor="#545454"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/shoe_iv"
             app:layout_constraintTop_toTopOf="@+id/shoe_iv" />
@@ -45,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:shadowColor="#656565"
             android:text="@{newShoeData.brand}"
             android:textSize="13sp"
             android:textStyle="bold"
@@ -55,8 +59,8 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="#f2f2f2"
+            android:layout_height="1.5dp"
+            android:background="#e1e1e1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

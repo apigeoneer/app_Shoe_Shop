@@ -7,10 +7,6 @@ import com.gmail.apigeoneer.shoeshop.models.Shoe
 
 class ShoeListViewModel: ViewModel() {
 
-    /**
-     * from data class Shoe
-     */
-    private var shoe: Shoe? = Shoe("", 0.0, "", "")
     private val shoes = mutableListOf<Shoe>()      // to be shared between fragments
 
     /**
@@ -26,9 +22,8 @@ class ShoeListViewModel: ViewModel() {
     val isShoeAdded: LiveData<Boolean>
         get() = _isShoeAdded
 
-    fun addShoe() {
-       // val newShoe = Shoe("", 0.0, "", "")
-        shoes.add(shoe!!)
+    fun addShoe(newShoe: Shoe) {
+        shoes.add(newShoe)
         _isShoeAdded.value = true
         _shoeList.value = shoes
     }

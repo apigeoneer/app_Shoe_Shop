@@ -1,5 +1,6 @@
 package com.gmail.apigeoneer.shoeshop.ui.overview
 
+import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -45,6 +46,11 @@ class ShoeListFragment : Fragment() {
                         R.layout.shoe_item, container, false)
                 shoeListItem.newShoeData = shoe
                 binding.shoeListLl.addView(shoeListItem.root)
+
+                if (shoeListViewModel.shoeList.value!!.isNotEmpty()) {
+                    binding.emptyTv.visibility = View.GONE
+                    binding.emptyIv.visibility = View.GONE
+                }
             }
         })
 

@@ -35,11 +35,13 @@ class DetailFragment : Fragment() {
 //
 //        })
 
+        // Initializing here so that the shoe variable in our layout won't be null & won't cause errors.
         binding.shoe = Shoe("", 0.0, "", "")
 
         binding.saveBtn.setOnClickListener {
+
             // Add the new shoe entry in the ViewModel
-            shoeListViewModel.addShoe()
+            shoeListViewModel.addShoe(binding.shoe!!)
             it.findNavController().navigate(R.id.action_detailFragment_to_shoeListFragment)
         }
 
