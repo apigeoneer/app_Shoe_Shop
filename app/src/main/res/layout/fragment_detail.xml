@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:padding="16dp"
-            android:text="Name"
+            android:text="@string/name"
             android:textAlignment="viewEnd"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:padding="16dp"
-            android:text="Brand"
+            android:text="@string/brand"
             android:textAlignment="viewEnd"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:ems="10"
-            android:hint="Enter the shoe name"
+            android:hint="@string/enter_the_shoe_name"
             android:inputType="textPersonName"
             android:textSize="16sp"
             android:text="@={shoe.name}"
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:ems="10"
-            android:hint="Enter the brand name"
+            android:hint="@string/enter_the_brand_name"
             android:inputType="text"
             android:textSize="16sp"
             android:text="@={shoe.brand}"
@@ -74,14 +74,13 @@
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/shoe_brand_tv" />
 
-
         <TextView
             android:id="@+id/shoe_size_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:padding="16dp"
-            android:text="Size"
+            android:text="@string/size"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/shoe_brand_tv" />
@@ -92,13 +91,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:ems="10"
-            android:hint="Enter a size (4 - 12) "
+            android:hint="@string/enter_a_size"
             android:inputType="number"
             android:textSize="16sp"
             android:text="@={`` + shoe.size}"
             app:layout_constraintBottom_toBottomOf="@+id/shoe_size_tv"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/shoe_size_tv" />
+            app:layout_constraintTop_toTopOf="@+id/shoe_size_tv"
+            android:importantForAutofill="no" />
 
         <TextView
             android:id="@+id/shoe_desc_tv"
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:padding="16dp"
-            android:text="Description"
+            android:text="@string/description"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/shoe_size_tv" />
@@ -117,13 +117,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:ems="10"
-            android:hint="Enter a short description"
+            android:hint="@string/enter_a_short_description"
             android:inputType="textMultiLine"
             android:textSize="16sp"
             android:text="@={shoe.description}"
             app:layout_constraintBottom_toBottomOf="@+id/shoe_desc_tv"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/shoe_desc_tv" />
+            app:layout_constraintTop_toTopOf="@+id/shoe_desc_tv"
+            android:importantForAutofill="no" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -143,7 +144,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="save" />
+                android:text="@string/save"
+                style="?android:attr/buttonBarButtonStyle" />
 
             <Button
                 android:id="@+id/cancel_btn"
@@ -151,7 +153,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="cancel" />
+                android:text="@string/cancel"
+                style="?android:attr/buttonBarButtonStyle" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

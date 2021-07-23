@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Constraint Layout helps in laying out views like fab easily -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,7 +26,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-
             </LinearLayout>
         </ScrollView>
 
@@ -33,7 +33,7 @@
             android:id="@+id/empty_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Click the Add button to add a shoe"
+            android:text="@string/empty_shoe_list_message"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -50,7 +50,8 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/empty_tv"
-            app:srcCompat="@drawable/shoeitem" />
+            app:srcCompat="@drawable/shoeitem"
+            android:contentDescription="@string/empty_shoe_list_image" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
@@ -63,7 +64,8 @@
             app:fabSize="normal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/ic_add" />
-
+            app:srcCompat="@drawable/ic_add"
+            android:contentDescription="@string/to_add_a_new_shoe_item"
+            android:focusable="true" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

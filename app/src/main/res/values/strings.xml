@@ -2,4 +2,17 @@
     <string name="app_name">Shoe Shop</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_shoe_list_message">Click the Add button to add a shoe</string>
+    <string name="to_add_a_new_shoe_item">To add a new shoe item</string>
+    <string name="empty_shoe_list_image">empty shoe list image</string>
+    <string name="name">Name</string>
+    <string name="brand">Brand</string>
+    <string name="enter_the_shoe_name">Enter the shoe name</string>
+    <string name="enter_the_brand_name">Enter the brand name</string>
+    <string name="size">Size</string>
+    <string name="enter_a_size">Enter a size (4 - 12)</string>
+    <string name="description">Description</string>
+    <string name="enter_a_short_description">Enter a short description</string>
+    <string name="save">save</string>
+    <string name="cancel">cancel</string>
 </resources>
