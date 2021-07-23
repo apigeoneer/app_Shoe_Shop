@@ -7,7 +7,7 @@ import com.gmail.apigeoneer.shoeshop.models.Shoe
 
 class ShoeListViewModel: ViewModel() {
 
-    private val shoes = mutableListOf<Shoe>()      // to be shared between fragments
+    private val shoes = mutableListOf<Shoe>()
 
     /**
      * from ShoeListFragment
