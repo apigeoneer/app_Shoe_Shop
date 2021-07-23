@@ -33,14 +33,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:text="@{newShoeData.name}"
             android:textColor="#545454"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/shoe_iv"
-            app:layout_constraintTop_toTopOf="@+id/shoe_iv" />
+            app:layout_constraintTop_toTopOf="@+id/shoe_iv"
+            tools:text="X Shoe" />
 
         <TextView
             android:id="@+id/brand_tv"
@@ -53,9 +53,41 @@
             android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.447"
             app:layout_constraintStart_toEndOf="@+id/shoe_iv"
-            app:layout_constraintTop_toBottomOf="@+id/name_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/name_tv"
+            tools:text="X Shoe Brand" />
+
+        <TextView
+            android:id="@+id/size_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:shadowColor="#356565"
+            android:text="@{`` + newShoeData.size}"
+            android:textSize="12sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/shoe_iv"
+            app:layout_constraintTop_toBottomOf="@+id/brand_tv"
+            tools:text="5.0" />
+
+        <TextView
+            android:id="@+id/desc_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:shadowColor="#656565"
+            android:text="@{newShoeData.description}"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/shoe_iv"
+            app:layout_constraintTop_toBottomOf="@+id/size_tv"
+            tools:text="A long desciption of X shoes from X shoe brand. A long desciption of X shoes from X shoe brand. A long desciption of X shoes from X shoe brand. A long desciption of X shoes from X shoe brand. " />
 
         <View
             android:layout_width="match_parent"

@@ -1,21 +1,19 @@
 package com.gmail.apigeoneer.shoeshop.ui.overview
 
-import android.opengl.Visibility
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.gmail.apigeoneer.shoeshop.R
 import com.gmail.apigeoneer.shoeshop.databinding.FragmentShoeListBinding
 import com.gmail.apigeoneer.shoeshop.databinding.ShoeItemBinding
-import com.gmail.apigeoneer.shoeshop.models.Shoe
 import com.gmail.apigeoneer.shoeshop.viewmodels.ShoeListViewModel
+
 
 class ShoeListFragment : Fragment() {
 
@@ -58,7 +56,28 @@ class ShoeListFragment : Fragment() {
             it.findNavController().navigate(R.id.action_shoeListFragment_to_detailFragment)
         }
 
+        val toolbar = binding.toolbar
+        (activity as AppCompatActivity?)!!.setSupportActionBar(toolbar)
+        toolbar.title = null;
+
+        setHasOptionsMenu(true)
+
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.logout_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_logout -> {
+                findNavController().navigate(R.id.action_shoeListFragment_to_loginFragment)
+                return true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
 }

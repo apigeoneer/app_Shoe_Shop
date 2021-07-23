@@ -14,9 +14,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="58dp"
-            android:layout_marginTop="104dp"
+            android:layout_marginTop="80dp"
             android:layout_marginEnd="@dimen/large_margin"
-            android:text="Name"
+            android:text="@string/name"
             android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,13 +31,13 @@
             android:layout_marginStart="@dimen/large_margin"
             android:layout_marginEnd="@dimen/large_margin"
             android:ems="10"
-            android:hint="Chloe Jhang"
+            android:hint="@string/enter_your_name"
             android:inputType="textPersonName"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/name_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/name_tv"
+            android:importantForAutofill="no" />
 
         <TextView
             android:id="@+id/email_tv"
@@ -46,11 +46,10 @@
             android:layout_marginStart="58dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="@dimen/large_margin"
-            android:text="E-mail"
+            android:text="@string/e_mail"
             android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/name_et" />
 
@@ -61,13 +60,13 @@
             android:layout_marginStart="@dimen/large_margin"
             android:layout_marginEnd="@dimen/large_margin"
             android:ems="10"
-            android:hint="chloejhang@nomad.home"
+            android:hint="@string/enter_your_e_mail"
             android:inputType="textEmailAddress"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/email_tv"
+            android:importantForAutofill="no" />
 
         <TextView
             android:id="@+id/password_tv"
@@ -76,11 +75,10 @@
             android:layout_marginStart="58dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="@dimen/large_margin"
-            android:text="Password"
+            android:text="@string/password"
             android:textSize="13sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email_et" />
 
@@ -91,13 +89,13 @@
             android:layout_marginStart="@dimen/large_margin"
             android:layout_marginEnd="@dimen/large_margin"
             android:ems="10"
-            android:hint="*******"
+            android:hint="@string/enter_a_password"
             android:inputType="textPassword"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.616"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_tv" />
+            app:layout_constraintTop_toBottomOf="@+id/password_tv"
+            android:importantForAutofill="no" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -108,7 +106,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/logo_image" />
 
         <LinearLayout
             android:id="@+id/buttons_ll"
@@ -119,7 +118,6 @@
             android:layout_marginEnd="@dimen/large_margin"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/password_et">
 
@@ -129,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="4dp"
                 android:layout_weight="1"
-                android:text="Log in" />
+                android:text="@string/log_in" />
 
             <Button
                 android:id="@+id/register_btn"
@@ -137,7 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:layout_weight="1"
-                android:text="Register" />
+                android:text="@string/register" />
         </LinearLayout>
 
         <TextView
@@ -147,8 +145,9 @@
             android:layout_marginStart="@dimen/large_margin"
             android:layout_marginTop="2dp"
             android:layout_marginEnd="@dimen/large_margin"
-            android:text="Forgot password?"
+            android:text="@string/forgot_password"
             android:textSize="13sp"
+            android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"

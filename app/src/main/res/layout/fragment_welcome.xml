@@ -16,7 +16,7 @@
             android:layout_marginTop="80dp"
             android:layout_marginEnd="120dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Choose from our latest collection of footwear that are sure to make you stand out"
+            android:text="@string/welcome_screen_text"
             android:textSize="28sp"
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +33,8 @@
             android:layout_marginTop="40dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/logo"
+            android:contentDescription="@string/logo_image" />
 
         <Button
             android:id="@+id/continue_btn"
@@ -41,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="48dp"
             android:layout_marginBottom="80dp"
-            android:text="continue"
+            android:text="@string/continue_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
