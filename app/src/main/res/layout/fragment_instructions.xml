@@ -7,6 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#f2f2f2"
         tools:context=".ui.InstructionsFragment">
 
         <TextView
@@ -42,11 +43,11 @@
             android:id="@+id/logo_iv"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/logo"
             android:layout_marginStart="48dp"
             android:layout_marginTop="40dp"
+            android:src="@drawable/logo"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/continue_btn"

@@ -14,6 +14,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#ffffff"
         tools:context=".ui.detail.DetailFragment">
 
         <ImageView
@@ -64,8 +65,8 @@
             android:ems="10"
             android:hint="@string/enter_the_shoe_name"
             android:inputType="textPersonName"
-            android:textSize="16sp"
             android:text="@={shoe.name}"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/shoe_name_tv"
             app:layout_constraintStart_toEndOf="@+id/shoe_name_tv"
             app:layout_constraintTop_toTopOf="@+id/shoe_name_tv" />
@@ -78,8 +79,8 @@
             android:ems="10"
             android:hint="@string/enter_the_brand_name"
             android:inputType="text"
-            android:textSize="16sp"
             android:text="@={shoe.brand}"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/shoe_brand_tv"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/shoe_brand_tv" />
@@ -102,13 +103,13 @@
             android:layout_marginStart="8dp"
             android:ems="10"
             android:hint="@string/enter_a_size"
+            android:importantForAutofill="no"
             android:inputType="number"
-            android:textSize="16sp"
             android:text="@={`` + shoe.size}"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/shoe_size_tv"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/shoe_size_tv"
-            android:importantForAutofill="no" />
+            app:layout_constraintTop_toTopOf="@+id/shoe_size_tv" />
 
         <TextView
             android:id="@+id/shoe_desc_tv"
@@ -128,13 +129,13 @@
             android:layout_marginStart="8dp"
             android:ems="10"
             android:hint="@string/enter_a_short_description"
+            android:importantForAutofill="no"
             android:inputType="textMultiLine"
-            android:textSize="16sp"
             android:text="@={shoe.description}"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="@+id/shoe_desc_tv"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/shoe_desc_tv"
-            android:importantForAutofill="no" />
+            app:layout_constraintTop_toTopOf="@+id/shoe_desc_tv" />
 
         <LinearLayout
             android:layout_width="match_parent"
