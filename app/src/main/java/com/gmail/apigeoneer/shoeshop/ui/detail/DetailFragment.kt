@@ -49,6 +49,10 @@ class DetailFragment : Fragment() {
             it.findNavController().navigate(R.id.action_detailFragment_to_shoeListFragment)
         }
 
+        binding.backIv.setOnClickListener {
+            it.findNavController().navigate(R.id.action_detailFragment_to_shoeListFragment)
+        }
+
         return binding.root
     }
 

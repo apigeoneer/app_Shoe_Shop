@@ -16,17 +16,26 @@
         android:layout_height="match_parent"
         tools:context=".ui.detail.DetailFragment">
 
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
         <TextView
             android:id="@+id/shoe_name_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:padding="16dp"
             android:text="@string/name"
             android:textAlignment="viewEnd"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/back_iv" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
