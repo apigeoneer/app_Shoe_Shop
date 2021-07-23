@@ -30,10 +30,12 @@ class DetailFragment : Fragment() {
         // tell the fragment that data binding is being used
         binding.lifecycleOwner = this
 
-        shoeListViewModel.shoeList.observe(viewLifecycleOwner, Observer {
-            // Update the UI
+//        shoeListViewModel.shoeList.observe(viewLifecycleOwner, Observer {
+//            // Update the UI
+//
+//        })
 
-        })
+        binding.shoe = Shoe("", 0.0, "", "")
 
         binding.saveBtn.setOnClickListener {
             // Add the new shoe entry in the ViewModel

@@ -19,7 +19,7 @@
             android:id="@+id/shoe_name_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="24dp"
             android:padding="16dp"
             android:text="Name"
             android:textAlignment="viewEnd"
@@ -38,25 +38,13 @@
             android:id="@+id/shoe_brand_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:padding="16dp"
             android:text="Brand"
             android:textAlignment="viewEnd"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintTop_toBottomOf="@+id/shoe_name_tv" />
-
-        <TextView
-            android:id="@+id/shoe_photograph_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:padding="16dp"
-            android:text="Photograph"
-            android:textAlignment="viewEnd"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/shoe_brand_tv" />
 
         <EditText
             android:id="@+id/shoe_name_et"
@@ -68,7 +56,7 @@
             android:inputType="textPersonName"
             android:textSize="16sp"
             android:text="@={shoe.name}"
-            app:layout_constraintBottom_toBottomOf="@+id/name_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/shoe_name_tv"
             app:layout_constraintStart_toEndOf="@+id/shoe_name_tv"
             app:layout_constraintTop_toTopOf="@+id/shoe_name_tv" />
 
@@ -86,26 +74,17 @@
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="@+id/shoe_brand_tv" />
 
-        <ImageView
-            android:id="@+id/shoe_image_iv"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="8dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_image"
-            app:layout_constraintStart_toEndOf="@+id/shoe_photograph_tv"
-            app:layout_constraintTop_toTopOf="@+id/shoe_photograph_tv" />
 
         <TextView
             android:id="@+id/shoe_size_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:padding="16dp"
             android:text="Size"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/shoe_image_iv" />
+            app:layout_constraintTop_toBottomOf="@+id/shoe_brand_tv" />
 
         <EditText
             android:id="@+id/shoe_size_et"
@@ -125,7 +104,7 @@
             android:id="@+id/shoe_desc_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:padding="16dp"
             android:text="Description"
             android:textStyle="bold"
@@ -150,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="28dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
