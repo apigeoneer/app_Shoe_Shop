@@ -25,4 +25,6 @@
     <string name="welcome_screen_text">Create your amazing collection of footwear that will surely make you stand out!</string>
     <string name="continue_text">Continue</string>
     <string name="welcome">WELCOME</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

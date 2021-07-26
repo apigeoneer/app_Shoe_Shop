@@ -1,4 +1,4 @@
-package com.gmail.apigeoneer.shoeshop.ui
+package com.gmail.apigeoneer.shoeshop.ui.onboarding
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
