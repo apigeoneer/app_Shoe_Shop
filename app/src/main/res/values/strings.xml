@@ -22,6 +22,7 @@
     <string name="log_in">Log in</string>
     <string name="register">Register</string>
     <string name="forgot_password">Forgot password?</string>
-    <string name="welcome_screen_text">Choose from an amazing collection of footwear that are sure to make you stand out.</string>
+    <string name="welcome_screen_text">Create your amazing collection of footwear that will surely make you stand out!</string>
     <string name="continue_text">Continue</string>
+    <string name="welcome">WELCOME</string>
 </resources>

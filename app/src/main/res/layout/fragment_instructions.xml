@@ -10,35 +10,6 @@
         android:background="#f2f2f2"
         tools:context=".ui.InstructionsFragment">
 
-        <TextView
-            android:id="@+id/instructions_tv2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="120dp"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Add as many shoe items as you please."
-            android:textSize="28sp"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/logo_iv"
-            app:layout_constraintTop_toBottomOf="@+id/logo_iv"
-            app:lineHeight="36dp" />
-
-        <TextView
-            android:id="@+id/instructions_tv"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Enter details for each shoe item."
-            android:textSize="28sp"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toEndOf="@+id/instructions_tv2"
-            app:layout_constraintStart_toStartOf="@+id/logo_iv"
-            app:layout_constraintTop_toBottomOf="@+id/instructions_tv2"
-            app:lineHeight="36dp" />
-
         <ImageView
             android:id="@+id/logo_iv"
             android:layout_width="50dp"
@@ -49,6 +20,50 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="120dp"
+            android:text="INSTRUCTIONS"
+            android:textColor="#3F51B5"
+            android:textSize="28sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/logo_iv"
+            app:layout_constraintTop_toBottomOf="@+id/logo_iv" />
+
+        <TextView
+            android:id="@+id/instructions_tv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="120dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Add as many shoe items as you please."
+            android:textSize="22sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/logo_iv"
+            app:layout_constraintTop_toBottomOf="@+id/title_tv"
+            app:lineHeight="28dp" />
+
+        <TextView
+            android:id="@+id/instructions_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Enter details for each shoe item."
+            android:textSize="22sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/instructions_tv2"
+            app:layout_constraintStart_toStartOf="@+id/logo_iv"
+            app:layout_constraintTop_toBottomOf="@+id/instructions_tv2"
+            app:lineHeight="28dp" />
+
         <Button
             android:id="@+id/continue_btn"
             android:layout_width="0dp"
@@ -58,5 +73,6 @@
             android:text="continue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
