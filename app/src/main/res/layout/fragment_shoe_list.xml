@@ -23,7 +23,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#f2f2f2"
+                android:background="#FF6200EE"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="@style/Widget.AppCompat.Toolbar" />
         </com.google.android.material.appbar.AppBarLayout>
@@ -53,6 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/empty_shoe_list_message"
+            android:textColor="#676767"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
