@@ -1,5 +1,6 @@
 package com.gmail.apigeoneer.shoeshop.ui.onboarding
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +9,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.viewpager2.widget.ViewPager2
 import com.gmail.apigeoneer.shoeshop.R
 import com.gmail.apigeoneer.shoeshop.databinding.FragmentLoginBinding
 
@@ -25,14 +28,25 @@ class LoginFragment : Fragment() {
             R.layout.fragment_login, container, false)
 
         binding.loginBtn.setOnClickListener {
-            it.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+            it.findNavController().navigate(R.id.action_loginFragment_to_viewPagerFragment)
         }
 
         binding.registerBtn.setOnClickListener {
-            it.findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+            it.findNavController().navigate(R.id.action_loginFragment_to_viewPagerFragment)
+        }
+
+        if (onBoardingFinished()) {
+            findNavController().navigate(R.id.action_loginFragment_to_shoeListFragment)
+        } else {
+            findNavController().navigate(R.id.action_loginFragment_to_viewPagerFragment)
         }
 
         return binding.root
+    }
+
+    private fun onBoardingFinished(): Boolean {
+        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("Finished", false)
     }
 
 }

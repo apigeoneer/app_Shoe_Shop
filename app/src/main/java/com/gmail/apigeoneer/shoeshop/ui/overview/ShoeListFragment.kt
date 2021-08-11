@@ -29,8 +29,10 @@ class ShoeListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater,
-            R.layout.fragment_shoe_list, container, false)
+        binding=DataBindingUtil.inflate(
+            inflater,
+            R.layout.fragment_shoe_list, container, false
+        )
 
         /**
          * The ShoeListFragment needs to observe the shoeList LiveData,
@@ -40,14 +42,16 @@ class ShoeListFragment : Fragment() {
 
             for (shoe in shoeListViewModel.shoeList.value!!) {
                 // inflate the shoe list item
-                val shoeListItem: ShoeItemBinding = DataBindingUtil.inflate(inflater,
-                        R.layout.shoe_item, container, false)
-                shoeListItem.newShoeData = shoe
+                val shoeListItem: ShoeItemBinding=DataBindingUtil.inflate(
+                    inflater,
+                    R.layout.shoe_item, container, false
+                )
+                shoeListItem.newShoeData=shoe
                 binding.shoeListLl.addView(shoeListItem.root)
 
                 if (shoeListViewModel.shoeList.value!!.isNotEmpty()) {
-                    binding.emptyTv.visibility = View.GONE
-                    binding.emptyIv.visibility = View.GONE
+                    binding.emptyTv.visibility=View.GONE
+                    binding.emptyIv.visibility=View.GONE
                 }
             }
         })
@@ -56,9 +60,9 @@ class ShoeListFragment : Fragment() {
             it.findNavController().navigate(R.id.action_shoeListFragment_to_detailFragment)
         }
 
-        val toolbar = binding.toolbar
+        val toolbar=binding.toolbar
         (activity as AppCompatActivity?)!!.setSupportActionBar(toolbar)
-        toolbar.title = null;
+        toolbar.title=null
 
         setHasOptionsMenu(true)
 
