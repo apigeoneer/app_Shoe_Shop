@@ -70,13 +70,14 @@ class ShoeListFragment : Fragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.logout_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.logout_menu, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_logout -> {
+                shoeListViewModel.cancelAddingShoe()
                 findNavController().navigate(R.id.action_shoeListFragment_to_loginFragment)
                 return true
             }
