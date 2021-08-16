@@ -15,7 +15,8 @@
             app:destination="@id/detailFragment" />
         <action
             android:id="@+id/action_shoeListFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginFragment" />
     </fragment>
 
     <fragment
@@ -45,7 +46,8 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_shoeListFragment"
-            app:destination="@id/shoeListFragment" />
+            app:destination="@id/shoeListFragment"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_loginFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment" />
