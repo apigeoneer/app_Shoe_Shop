@@ -9,6 +9,7 @@
             type="com.gmail.apigeoneer.shoeshop.models.Shoe" />
     </data>
 
+    <!-- Constraint layout is used instead of nested Linear Layouts for a flat view hierarchy -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
